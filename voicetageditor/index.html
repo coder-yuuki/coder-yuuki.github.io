@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoiceTagEditor ダウンロード・サポート</title>
+    <meta name="description" content="音声作品・ボイスドラマのタグ、カバー画像、トラック番号をかんたんに整えられる無料デスクトップアプリ「VoiceTagEditor」のダウンロードとサポートページです。" />
+    <meta name="theme-color" content="#c92a1d" />
+    <link rel="icon" href="../assets/img/voicetageditor-favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/img/voicetageditor-icon.png" />
+    <link rel="stylesheet" href="../assets/site.css" />
+  </head>
+  <body data-app="voicetageditor">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./"><img src="../assets/img/voicetageditor-icon.png" alt="" width="32" height="32" /><span>VoiceTagEditor</span></a>
+        <a class="header-link" href="../">ほかのアプリ</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="app-hero">
+        <div class="app-hero-top">
+          <img class="app-icon" src="../assets/img/voicetageditor-icon.png" alt="VoiceTagEditorのアイコン" width="88" height="88" />
+          <div>
+            <p class="kicker">無料デスクトップアプリ（macOS / Windows）</p>
+            <h1>VoiceTagEditor</h1>
+          </div>
+        </div>
+        <p class="lead">音声作品・ボイスドラマのタグ、カバー画像、トラック番号をかんたんに整えて保存できるパソコン用アプリです。WAV・MP3・FLAC・M4Aに対応し、すべてお使いのパソコン内だけで処理します。</p>
+        <div class="button-row" id="download-buttons">
+          <a
+            id="dl-mac"
+            class="button primary download"
+            href="https://github.com/coder-yuuki/VoiceTagEditor/releases/latest"
+            data-asset-key="mac"
+          >
+            <span>macOS版をダウンロード</span>
+            <span class="button-sub" data-size>Apple Silicon · .dmg</span>
+          </a>
+          <a
+            id="dl-win"
+            class="button ghost download"
+            href="https://github.com/coder-yuuki/VoiceTagEditor/releases/latest"
+            data-asset-key="winExe"
+          >
+            <span>Windows版をダウンロード</span>
+            <span class="button-sub" data-size>64-bit · .exe</span>
+          </a>
+        </div>
+        <div class="download-meta" id="download-meta">
+          <span id="release-status">最新バージョンを確認しています…</span>
+          <a
+            id="dl-win-msi"
+            href="https://github.com/coder-yuuki/VoiceTagEditor/releases/latest"
+            data-asset-key="winMsi"
+            hidden
+          >Windows (.msi)</a>
+          <a href="https://github.com/coder-yuuki/VoiceTagEditor/releases/latest" target="_blank" rel="noopener noreferrer">GitHubリリースを見る ↗</a>
+        </div>
+        <ul class="page-nav" aria-label="このページの内容">
+          <li><a href="#install">インストール</a></li>
+          <li><a href="#how-to">使い方</a></li>
+          <li><a href="#features">できること</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </section>
+
+      <section id="install" class="section">
+        <h2>インストール方法</h2>
+        <div class="feature-grid">
+          <div class="card">
+            <h3>macOS（Apple Silicon）</h3>
+            <p>上のボタンから <code class="code-inline">.dmg</code> ファイルをダウンロードして開き、<code class="code-inline">VoiceTagEditor</code> を <strong>Applications</strong> フォルダへドラッグして入れます。</p>
+          </div>
+          <div class="card">
+            <h3>Windows（64-bit）</h3>
+            <p>上のボタンから <code class="code-inline">-setup.exe</code>（または <code class="code-inline">.msi</code>）をダウンロードし、ダブルクリックして画面の案内に沿ってインストールします。</p>
+          </div>
+        </div>
+        <p class="note">初回起動時にセキュリティ警告が出た場合や、音声エンジン（FFmpeg）の準備については、下の「よくある質問」をご確認ください。</p>
+      </section>
+
+      <section id="how-to" class="section">
+        <h2>かんたん4ステップの使い方</h2>
+        <ol class="steps">
+          <li><strong>音声を選ぶ</strong><p>音声ファイルや作品フォルダをドラッグ＆ドロップします。フォルダ内のカバー画像も自動で読み込みます。</p></li>
+          <li><strong>作品情報を入力する</strong><p>作品名・サークル名・発売日・タグ・カバー画像を設定します。</p></li>
+          <li><strong>トラックを確認・整理する</strong><p>ミニプレイヤーで中身を試聴しながら、タイトル・トラック番号・声優を整理します。</p></li>
+          <li><strong>保存する</strong><p>保存先フォルダを選ぶだけ。元のファイルを残したまま、<code class="code-inline">サークル名 / 作品名</code> フォルダへ安全に書き出します。</p></li>
+        </ol>
+        <p class="note">初めてでも迷わない「かんたんモード」と、1画面で素早く編集できる「詳細モード」をいつでも切り替えられます。</p>
+      </section>
+
+      <section id="features" class="section">
+        <h2>できること</h2>
+        <div class="feature-grid">
+          <div class="card"><h3>2つの編集モード</h3><p>ガイド付きで順番に進められる「かんたんモード」と、全項目を一覧で素早く編集できる「詳細モード」を切り替えられます。</p></div>
+          <div class="card"><h3>ミニプレイヤーで試聴</h3><p>トラック一覧からワンクリックで再生できます。シークバー、±10秒スキップ、前後トラック移動にも対応しています。</p></div>
+          <div class="card"><h3>トラック整理・タイトル一括整形</h3><p>ドラッグ＆ドロップやボタンで並び替え、ディスクごとの連番振り直し、先頭の番号・記号除去や一括置換ができます。</p></div>
+          <div class="card"><h3>声優の一括入力とコピー</h3><p>全トラックへの一括適用、先頭トラックからのコピー、上のトラックからのコピーで手間を減らせます。</p></div>
+          <div class="card"><h3>4言語の画面表示</h3><p>日本語・English・한국어・繁體中文（台灣）に対応しています。ヘッダーからいつでも切り替えられます。</p></div>
+          <div class="card"><h3>完全ローカル処理で安心</h3><p>Undo / Redo、前回の保存先記憶、保存後の自動デコード検証を備えています。音声やタグを外部へ送信しません。</p></div>
+        </div>
+        <p class="note">対応形式：WAV / MP3 / FLAC / M4A</p>
+      </section>
+
+      <section id="faq" class="section">
+        <h2>よくある質問</h2>
+        <div class="faq">
+          <details>
+            <summary>macOSで「開発元を確認できない」などの警告が出て開けません</summary>
+            <div class="answer">
+              <p>Finderの「アプリケーション」フォルダで <code class="code-inline">VoiceTagEditor</code> を右クリックし、「開く」を選んでください。表示されたダイアログでもう一度「開く」をクリックすると起動できます。</p>
+              <p>それでも開けない場合は、ターミナルで次のコマンドを実行してください。</p>
+              <pre class="code-block"><code>xattr -dr com.apple.quarantine /Applications/VoiceTagEditor.app</code></pre>
+            </div>
+          </details>
+          <details>
+            <summary>Windowsで「WindowsによってPCが保護されました」と表示されます</summary>
+            <div class="answer"><p>警告画面の「詳細情報」をクリックし、続けて「実行」をクリックしてインストールを進めてください。</p></div>
+          </details>
+          <details>
+            <summary>初回起動時にFFmpegの準備が始まりますか？</summary>
+            <div class="answer">
+              <p>VoiceTagEditorは音声の解析・保存にFFmpegを使用します（アプリ本体には同梱していません）。初回起動時にFFmpegが見つからない場合は、自動でインストールを試みます。</p>
+              <p>macOSでは <a href="https://brew.sh/" target="_blank" rel="noopener noreferrer">Homebrew</a>、Windowsでは <code class="code-inline">winget</code> / <code class="code-inline">Chocolatey</code> / <code class="code-inline">Scoop</code> のいずれかを使用します。</p>
+            </div>
+          </details>
+          <details>
+            <summary>元の音声ファイルは上書きされますか？</summary>
+            <div class="answer"><p>いいえ。元のファイルは残したまま、選んだ保存先フォルダに <code class="code-inline">サークル名 / 作品名</code> の構成で新しく書き出します。</p></div>
+          </details>
+          <details>
+            <summary>無料で使えますか？</summary>
+            <div class="answer"><p>はい。MITライセンスのオープンソースソフトとして無料で公開しています。</p></div>
+          </details>
+          <details>
+            <summary>対応しているOSを教えてください</summary>
+            <div class="answer"><p>配布しているビルドは、macOS（Apple Silicon）と Windows（64-bit）向けです。</p></div>
+          </details>
+          <details>
+            <summary>音声ファイルやタグ情報は外部に送信されますか？</summary>
+            <div class="answer"><p>送信されません。解析・編集・保存はすべてお使いのパソコン内だけで完結します。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2 class="sr-only">お問い合わせ</h2>
+        <div class="contact-card">
+          <div>
+            <h3 class="section-title">お問い合わせ・不具合の報告</h3>
+            <p>不具合の報告やご要望は GitHub Issues で受け付けています。次の内容を書いていただけると、確認がスムーズです。</p>
+            <ul>
+              <li>お使いのOSとバージョン（macOS / Windows）</li>
+              <li>VoiceTagEditorのバージョン</li>
+              <li>困っていることと、表示されたメッセージ</li>
+            </ul>
+          </div>
+          <a class="button primary" href="https://github.com/coder-yuuki/VoiceTagEditor/issues" target="_blank" rel="noopener noreferrer">GitHub Issuesを開く ↗</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>免責事項</h2>
+        <p class="muted">本アプリは元ファイルを残して書き出す設計ですが、大切な音声ファイルはあらかじめバックアップを取ることをおすすめします。本アプリの利用によって生じた損害について、開発者は法令で認められる範囲で責任を負いません。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 野久知 優希</p>
+        <nav class="footer-links" aria-label="関連リンク">
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="https://github.com/coder-yuuki/VoiceTagEditor" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/coder-yuuki/VoiceTagEditor/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
+          <a href="../">ほかのアプリ</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const REPO = "coder-yuuki/VoiceTagEditor";
+        const API_URL = `https://api.github.com/repos/${REPO}/releases/latest`;
+        const RELEASES_URL = `https://github.com/${REPO}/releases/latest`;
+        const CACHE_KEY = "vte_latest_release_v1";
+        const CACHE_TTL_MS = 10 * 60 * 1000;
+
+        const buttonsRow = document.getElementById("download-buttons");
+        const macBtn = document.getElementById("dl-mac");
+        const winBtn = document.getElementById("dl-win");
+        const msiLink = document.getElementById("dl-win-msi");
+        const statusEl = document.getElementById("release-status");
+
+        const detectOS = () => {
+          const platform = (navigator.userAgentData?.platform || navigator.platform || navigator.userAgent || "").toLowerCase();
+          if (platform.includes("win")) return "windows";
+          if (platform.includes("mac")) return "macos";
+          return "other";
+        };
+
+        const prioritizeButtons = () => {
+          const os = detectOS();
+          if (os === "windows" && buttonsRow && winBtn && macBtn) {
+            buttonsRow.insertBefore(winBtn, macBtn);
+            winBtn.classList.remove("ghost");
+            winBtn.classList.add("primary");
+            macBtn.classList.remove("primary");
+            macBtn.classList.add("ghost");
+          }
+        };
+
+        const formatSize = (bytes) => {
+          if (!Number.isFinite(bytes) || bytes <= 0) return "";
+          return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+        };
+
+        const parseRelease = (data) => {
+          const assets = Array.isArray(data?.assets) ? data.assets : [];
+          const pick = (predicate) => assets.find((a) => a && typeof a.name === "string" && predicate(a.name));
+          const mac = pick((n) => n.endsWith(".dmg"));
+          const winExe = pick((n) => n.endsWith("-setup.exe")) || pick((n) => n.endsWith(".exe"));
+          const winMsi = pick((n) => n.endsWith(".msi"));
+          return {
+            tag: typeof data?.tag_name === "string" ? data.tag_name : "",
+            mac: mac ? { url: mac.browser_download_url, size: mac.size, name: mac.name } : null,
+            winExe: winExe ? { url: winExe.browser_download_url, size: winExe.size, name: winExe.name } : null,
+            winMsi: winMsi ? { url: winMsi.browser_download_url, size: winMsi.size, name: winMsi.name } : null,
+          };
+        };
+
+        const readCache = () => {
+          try {
+            const raw = sessionStorage.getItem(CACHE_KEY);
+            if (!raw) return null;
+            const parsed = JSON.parse(raw);
+            if (!parsed || Date.now() - parsed.savedAt > CACHE_TTL_MS) return null;
+            return parsed.release || null;
+          } catch {
+            return null;
+          }
+        };
+
+        const writeCache = (release) => {
+          try {
+            sessionStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), release }));
+          } catch {
+            // sessionStorage unavailable
+          }
+        };
+
+        let resolvedRelease = null;
+
+        const applyRelease = (release) => {
+          resolvedRelease = release;
+
+          if (release.mac?.url && macBtn) {
+            macBtn.href = release.mac.url;
+            const sizeText = formatSize(release.mac.size);
+            const sub = macBtn.querySelector("[data-size]");
+            if (sub) sub.textContent = sizeText ? `Apple Silicon · .dmg · ${sizeText}` : "Apple Silicon · .dmg";
+          }
+
+          if (release.winExe?.url && winBtn) {
+            winBtn.href = release.winExe.url;
+            const sizeText = formatSize(release.winExe.size);
+            const sub = winBtn.querySelector("[data-size]");
+            if (sub) sub.textContent = sizeText ? `64-bit · .exe · ${sizeText}` : "64-bit · .exe";
+          }
+
+          if (release.winMsi?.url && msiLink) {
+            msiLink.href = release.winMsi.url;
+            const sizeText = formatSize(release.winMsi.size);
+            msiLink.textContent = sizeText ? `Windows (.msi · ${sizeText})` : "Windows (.msi)";
+            msiLink.hidden = false;
+          }
+
+          if (statusEl) {
+            statusEl.textContent = release.tag ? `最新バージョン：${release.tag}` : "最新版の準備ができました";
+          }
+        };
+
+        const loadLatestRelease = async () => {
+          const cached = readCache();
+          if (cached) {
+            applyRelease(cached);
+            return cached;
+          }
+          const res = await fetch(API_URL, {
+            headers: { Accept: "application/vnd.github+json" },
+          });
+          if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
+          const data = await res.json();
+          const release = parseRelease(data);
+          writeCache(release);
+          applyRelease(release);
+          return release;
+        };
+
+        prioritizeButtons();
+
+        const pending = loadLatestRelease().catch(() => {
+          if (statusEl) {
+            statusEl.textContent = "最新版の直接リンク取得に失敗したため、GitHubリリースページからダウンロードできます。";
+          }
+          return null;
+        });
+
+        for (const el of [macBtn, winBtn, msiLink]) {
+          if (!el) continue;
+          el.addEventListener("click", async (event) => {
+            const key = el.dataset.assetKey;
+            if (!key || resolvedRelease?.[key]?.url) return;
+            event.preventDefault();
+            const release = await pending;
+            const targetUrl = release?.[key]?.url || RELEASES_URL;
+            window.location.assign(targetUrl);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

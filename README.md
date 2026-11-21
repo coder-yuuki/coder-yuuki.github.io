@@ -1,6 +1,6 @@
 # coder-yuuki.github.io
 
-野久知 優希のiPhoneアプリの、サポートページとプライバシーポリシーをまとめた静的サイトです。
+野久知 優希のアプリの、サポートページ・ダウンロード・プライバシーポリシーをまとめた静的サイトです。
 GitHub Pagesのユーザーサイト（`https://coder-yuuki.github.io/`）として公開する想定です。
 
 ## ページ
@@ -14,6 +14,8 @@ GitHub Pagesのユーザーサイト（`https://coder-yuuki.github.io/`）とし
 | `/shortidea/privacy.html` | ShortIdea プライバシーポリシー |
 | `/palettecount/` | PaletteCount サポート |
 | `/palettecount/privacy.html` | PaletteCount プライバシーポリシー |
+| `/voicetageditor/` | VoiceTagEditor ダウンロード・サポート |
+| `/voicetageditor/privacy.html` | VoiceTagEditor プライバシーポリシー |
 
 にゃんボイスは `nyanvoice.com`（別リポジトリ `nyanvoice_site`）にあります。
 
