@@ -47,11 +47,12 @@
       </section>
 
       <section>
-        <h2>3. 外部への送信</h2>
+        <h2>3. 外部への送信（通信）</h2>
         <ul>
           <li>本アプリは、解析・変換・編集したデータを開発者や第三者へ自動送信しません。</li>
-          <li>音声の解析・変換処理のために、お使いのパソコンにインストール済みの FFmpeg を外部プロセスとして呼び出します（FFmpeg は本アプリに同梱していません）。</li>
-          <li>初回起動時に FFmpeg が見つからない場合、自動導入のためにお使いのOSのパッケージ管理ツール（Homebrew / winget / Chocolatey / Scoop）を通じて外部から取得することがあります。</li>
+          <li>音声の解析・変換処理のために FFmpeg を外部プロセスとして呼び出します（FFmpeg は本アプリに同梱していません）。</li>
+          <li>FFmpeg が見つからない場合に限り、初回に FFmpeg の配布元（macOS：<code class="code-inline">ffmpeg.martin-riedl.de</code>、Windows：<code class="code-inline">github.com</code>）から FFmpeg 本体をダウンロードします。この通信で音声ファイルやタグ情報が送信されることはありません（一般的な HTTP 通信と同様に、IP アドレスやアプリ名・バージョンを含む User-Agent は配布元に届きます）。なお、ダウンロードに失敗した場合は、お使いの OS のパッケージ管理ツール（Homebrew / winget / Chocolatey / Scoop）を通じて取得を試みることがあります。</li>
+          <li>アップデートの確認のため、本アプリの更新情報を取得する通信を行います。</li>
         </ul>
       </section>
 
@@ -60,9 +61,10 @@
         <p>本アプリは利便性のため、次の情報をパソコン内に保存する場合があります。</p>
         <ul>
           <li><strong>オンボーディングの表示状態：</strong>WebView のローカルストレージ（キー：<code class="code-inline">vte_onboarding_seen_v1</code>）</li>
+          <li><strong>自動ダウンロードした FFmpeg：</strong>macOS は <code class="code-inline">~/Library/Application Support/com.noguchiyuuki.voicetageditor/ffmpeg/</code>、Windows は <code class="code-inline">%LOCALAPPDATA%\com.noguchiyuuki.voicetageditor\ffmpeg\</code></li>
           <li><strong>カバー画像の一時キャッシュ：</strong>パソコン内のキャッシュフォルダ（例：<code class="code-inline">$HOME/.cache/VoiceTagEditor/album_art/</code>、環境により <code class="code-inline">USERPROFILE</code> 配下）</li>
         </ul>
-        <p>オンボーディングの表示状態は WebView のローカルストレージを削除することで初期化できます。カバー画像の一時キャッシュは、上記のキャッシュフォルダを削除することで消去できます。</p>
+        <p>オンボーディングの表示状態は WebView のローカルストレージを削除することで初期化できます。自動ダウンロードした FFmpeg やカバー画像の一時キャッシュは、上記のフォルダごと削除して構いません（FFmpeg は必要になれば再度ダウンロードされます）。</p>
       </section>
 
       <section>

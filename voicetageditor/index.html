@@ -79,7 +79,7 @@
             <p>上のボタンから <code class="code-inline">-setup.exe</code>（または <code class="code-inline">.msi</code>）をダウンロードし、ダブルクリックして画面の案内に沿ってインストールします。</p>
           </div>
         </div>
-        <p class="note">初回起動時にセキュリティ警告が出た場合や、音声エンジン（FFmpeg）の準備については、下の「よくある質問」をご確認ください。</p>
+        <p class="note">初回起動時にセキュリティ警告が出た場合や、音声エンジン（FFmpeg）の自動準備については、下の「よくある質問」をご確認ください。</p>
       </section>
 
       <section id="how-to" class="section">
@@ -124,8 +124,11 @@
           <details>
             <summary>初回起動時にFFmpegの準備が始まりますか？</summary>
             <div class="answer">
-              <p>VoiceTagEditorは音声の解析・保存にFFmpegを使用します（アプリ本体には同梱していません）。初回起動時にFFmpegが見つからない場合は、自動でインストールを試みます。</p>
-              <p>macOSでは <a href="https://brew.sh/" target="_blank" rel="noopener noreferrer">Homebrew</a>、Windowsでは <code class="code-inline">winget</code> / <code class="code-inline">Chocolatey</code> / <code class="code-inline">Scoop</code> のいずれかを使用します。</p>
+              <p>VoiceTagEditorは音声の解析・保存にFFmpegを使用します（アプリ本体には同梱していません）。初回起動時にFFmpegが見つからない場合は、アプリが自動でダウンロードして準備します（初回のみ。macOS 約55MB / Windows 約115MB）。Homebrewやwingetなどの事前準備は不要です。</p>
+              <p>保存先はアプリ専用のデータフォルダ（macOS：<code class="code-inline">~/Library/Application Support/com.noguchiyuuki.voicetageditor/ffmpeg/</code>、Windows：<code class="code-inline">%LOCALAPPDATA%\com.noguchiyuuki.voicetageditor\ffmpeg\</code>）で、システムの設定（PATHなど）は変更しません。</p>
+              <p>ダウンロードするのはバージョン固定のビルド（FFmpeg 9.1：macOSは <a href="https://ffmpeg.martin-riedl.de/" target="_blank" rel="noopener noreferrer">ffmpeg.martin-riedl.de</a>、Windowsは <a href="https://www.gyan.dev/ffmpeg/builds/" target="_blank" rel="noopener noreferrer">gyan.dev</a>）で、SHA256で改ざんがないことを確認してから使います。</p>
+              <p>すでにFFmpegがインストールされている場合はそちらをそのまま使います。なお、自動ダウンロード版はmacOS 12以降が必要です。古いmacOSやダウンロードに失敗した場合は、<a href="https://brew.sh/" target="_blank" rel="noopener noreferrer">Homebrew</a> / <code class="code-inline">winget</code> / <code class="code-inline">Chocolatey</code> / <code class="code-inline">Scoop</code> が使える環境ならそれを使ってインストールを試みます。</p>
+              <p>FFmpegは <a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer">FFmpegプロジェクト</a> のソフトウェアで、LGPL / GPLライセンスで配布されています。</p>
             </div>
           </details>
           <details>
@@ -138,7 +141,7 @@
           </details>
           <details>
             <summary>対応しているOSを教えてください</summary>
-            <div class="answer"><p>配布しているビルドは、macOS（Apple Silicon）と Windows（64-bit）向けです。</p></div>
+            <div class="answer"><p>配布しているビルドは、macOS（Apple Silicon）と Windows（64-bit）向けです。なお、FFmpegの自動ダウンロードは macOS 12 以降に対応しています。</p></div>
           </details>
           <details>
             <summary>音声ファイルやタグ情報は外部に送信されますか？</summary>
